@@ -1,5 +1,6 @@
 const express = require('express');
 
+//Import the model to use its database functions
 const burger = require('../models/burger');
 
 const app = express();
@@ -19,3 +20,5 @@ app.put("/api/burgers/:id", function(req, res) {
     
 
 });
+
+module.exports = router;
