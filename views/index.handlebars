@@ -1,11 +1,10 @@
 <div class="heading-part">
+<div id='main-img'><img src="/images/bburg2.png" alt="burger truck with a happy burger on the top"></div>
 <h1>Burgers!</h1>
-<div id='main-img'><img src="/images/bburg.png" alt="burger truck with a happy burger on the top"></div>
+
 </div>
 <div class="ordering">
 <h2>Order a burger</h2>
-
-
 
 <form class="create-form">
 
@@ -20,11 +19,12 @@
     <input type="radio" name="sleepy" value="0"> Awake
   </div> --}}
 
-  <button type="submit">Order burger</button>
+  <button id="order-butt" type="submit">Order burger</button>
 </form>
 
 </div>
 
+<div id="waiting">
 <h2>Burgers Waiting to be Devoured</h2>
 
 <ul>
@@ -38,7 +38,9 @@
     {{/unless}}
   {{/each}}
 </ul>
+</div>
 
+<div id="devoured">
 <h2>Burgers that Have Been Devoured</h2>
 
 <ul>
@@ -50,5 +52,8 @@
     {{/if}}
   {{/each}}
 </ul>
+
+</div>
+
 
 
