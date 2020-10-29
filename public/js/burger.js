@@ -1,5 +1,5 @@
 $(function() {
-    $(".change-sleep").on("click", function(event) {
+    $(".devour-btn").on("click", function(event) {
       var id = $(this).data("id");
       
   
@@ -21,18 +21,20 @@ $(function() {
   });
 
   //Send POST request 
-  $(".order-form").on('submit', function(event) {
+  $(".create-form").on('submit', function(event) {
     
     event.preventDefault();
 
     let newBurger;
 
-    if ($('textarea').val()) {
+    if ($('#burger-input').val()) {
       newBurger = {
-        burger_name: $("textarea").val().trim(),
+        burger_name: $("#burger-input").val().trim(),
         devoured: 0
       };
     }
+
+    console.log(newBurger);
 
     $.ajax('/api/burgers', {
       type: "POST",

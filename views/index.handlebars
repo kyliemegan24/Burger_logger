@@ -1,11 +1,17 @@
-<h1>Cats!</h1>
-
+<div class="heading-part">
+<h1>Burgers!</h1>
+<div id='main-img'><img src="/public/images/burgey.png" alt="burger truck with a happy burger on the top"></div>
+</div>
+<div class="ordering">
 <h2>Order a burger</h2>
+
+
+
 <form class="create-form">
 
   <div class="form-group">
     <label for="ca">Name of Burger:</label>
-    <input type="text" id="ca" name="name">
+    <input type="text" id="burger-input" name="name">
   </div>
 
   {{!-- <div class="form-group">
@@ -17,12 +23,18 @@
   <button type="submit">Order burger</button>
 </form>
 
+</div>
+
 <h2>Burgers Waiting to be Devoured</h2>
 
 <ul>
   {{#each burgers}}
     {{#unless devoured}}
-      {{> cats/cat-block sleep=true}}
+      <li class="list-item">
+          {{id}}. {{burger_name}}
+          <button type="submit" class="u-pull-right devour-btn" data-id="{{id}}" data-devoured={{devoured}}>
+          Devour</button>
+        </li>
     {{/unless}}
   {{/each}}
 </ul>
@@ -32,7 +44,9 @@
 <ul>
   {{#each burgers}}
     {{#if devoured}}
-      {{> cats/cat-block sleep=false}}
+       <li class="list-item">
+          {{id}}. {{burger_name}}
+        </li>
     {{/if}}
   {{/each}}
 </ul>
