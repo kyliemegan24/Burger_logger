@@ -6,7 +6,7 @@ const routes = require('./controllers/burger_controller')
 
 const app = express(); 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || '3000';
 
 //Serve static content for the app from the 'Public' directory in the app directory 
 app.use(express.static("public"));
